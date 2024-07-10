@@ -1,0 +1,8 @@
+ingress:
+  enabled: true
+  host: webui.lan
+ollama:
+  enabled: false   
+pipelines:
+  enabled: false
+  

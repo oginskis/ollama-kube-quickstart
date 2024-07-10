@@ -1,0 +1,25 @@
+# ollama:
+#   models:
+#   - llama3:latest 
+#   - codellama:7b-code
+#   - nomic-embed-text:latest 
+  
+persistentVolume:
+  enabled: true
+  existingClaim: local-models
+
+resources:
+  limits:
+    memory: "8000Mi"
+    cpu: "5"
+  requests: 
+    memory: "8000Mi"
+    cpu: "5"
+
+ingress:
+  enabled: true
+  hosts:
+  - host: ollama.lan
+    paths:
+      - path: /
+        pathType: Prefix
